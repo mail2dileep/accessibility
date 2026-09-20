@@ -1,0 +1,47 @@
+"Test Case ID","Test Summary","Objective","Test Type","Test Data","Steps","Expected Result","Priority","Requirement ID"
+"TC_001","Validate column layout visibility for end-user","Ensure user can see column layout on CPS Energy website pages","Positive","Page with Column Control component added","1. Navigate to CPS Energy website page with Column Control component","Column layout is visible to the user","High","CEAUP-45"
+"TC_002","Validate author can add Column Control component","Ensure author can add Column Control to a page","Positive","Author credentials, access to authoring interface","1. Log in as author
+2. Open page in authoring mode
+3. Add Column Control component
+4. Publish or preview the page","Column Control component is added and visible on the page","High","CEAUP-45"
+"TC_003","Validate author can select 2 Columns 50,50 layout","Ensure author can set layout to 2 columns, each 50 percent width","Positive","Author credentials, Column Control component","1. Log in as author
+2. Open page in authoring mode
+3. Add Column Control component
+4. Select 2 Columns (50%,50%) layout
+5. Publish or preview the page","Page displays two columns, each occupying 50 percent width","High","CEAUP-45"
+"TC_004","Validate author can select 2 Columns Wide Left 66,33 layout","Ensure author can set layout to 2 columns, left 66 percent, right 33 percent","Positive","Author credentials, Column Control component","1. Log in as author
+2. Open page in authoring mode
+3. Add Column Control component
+4. Select 2 Columns Wide Left (66%,33%) layout
+5. Publish or preview the page","Page displays two columns, left column 66 percent, right column 33 percent width","High","CEAUP-45"
+"TC_005","Validate author can select 2 Columns Wide Right 33,66 layout","Ensure author can set layout to 2 columns, left 33 percent, right 66 percent","Positive","Author credentials, Column Control component","1. Log in as author
+2. Open page in authoring mode
+3. Add Column Control component
+4. Select 2 Columns Wide Right (33%,66%) layout
+5. Publish or preview the page","Page displays two columns, left column 33 percent, right column 66 percent width","High","CEAUP-45"
+"TC_006","Validate author can select 3 Columns 33,33,33 layout","Ensure author can set layout to 3 columns, each 33 percent width","Positive","Author credentials, Column Control component","1. Log in as author
+2. Open page in authoring mode
+3. Add Column Control component
+4. Select 3 Columns (33%,33%,33%) layout
+5. Publish or preview the page","Page displays three columns, each occupying 33 percent width","High","CEAUP-45"
+"TC_007","Validate author can select 4 Columns 25,25,25,25 layout","Ensure author can set layout to 4 columns, each 25 percent width","Positive","Author credentials, Column Control component","1. Log in as author
+2. Open page in authoring mode
+3. Add Column Control component
+4. Select 4 Columns (25%,25%,25%,25%) layout
+5. Publish or preview the page","Page displays four columns, each occupying 25 percent width","High","CEAUP-45"
+"TC_008","Validate author can adjust column layout after adding","Ensure author can change column layout after initial selection","Positive","Author credentials, Column Control component","1. Log in as author
+2. Open page in authoring mode
+3. Add Column Control component
+4. Select any column layout
+5. Change to a different column layout
+6. Publish or preview the page","Page updates to reflect the new column layout","Medium","CEAUP-45"
+"TC_009","Validate column layout matches AEM 6.2 behavior","Ensure column layouts behave as in AEM 6.2","Positive","AEM 6.2 and AEM 6.5 environments, Column Control component","1. Add Column Control component in AEM 6.2 and 6.5
+2. Select each layout option
+3. Compare rendered output","Column layouts in AEM 6.5 match those in AEM 6.2","Medium","CEAUP-45"
+"TC_010","Validate column layout on mobile devices","Ensure column layouts are responsive and display correctly on mobile","Mobile Responsive","Mobile device or emulator, page with Column Control component","1. Open page with Column Control component on mobile device
+2. Observe column layout","Columns stack or adjust responsively for mobile view","Medium","CEAUP-45"
+"TC_011","Validate unauthorized user cannot author Column Control","Ensure unauthorized users cannot add or modify Column Control component","Security","Non-author user credentials","1. Log in as non-author user
+2. Attempt to add or modify Column Control component","Unauthorized user is denied access to authoring actions","High","CEAUP-45"
+"TC_012","Validate invalid column layout selection is handled","Ensure system handles invalid or unsupported layout selection gracefully","Negative","Author credentials, attempt to select invalid layout","1. Log in as author
+2. Attempt to select an invalid or unsupported column layout
+3. Publish or preview the page","System prevents invalid selection or displays error message","Medium","CEAUP-45"

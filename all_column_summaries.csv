@@ -1,0 +1,56 @@
+Column,Total Values,Unique Values
+URL,25,1
+
+Value,Count
+"https://www.mbusa.com/en/home?tab=welcome-home-celebration",25
+
+Column,Total Values,Unique Values
+Rule,25,6
+
+Value,Count
+"Certain ARIA roles must be contained by particular parents",7
+"Elements must only use supported ARIA attributes",6
+"Elements must meet minimum color contrast ratio thresholds",6
+"ARIA role should be appropriate for the element",4
+"Certain ARIA roles must contain particular children",1
+"Heading levels should only increase by one",1
+
+Column,Total Values,Unique Values
+Violation description,25,6
+
+Value,Count
+"Ensure elements with an ARIA role that require parent roles are contained by them",7
+"Ensure an element's role supports its ARIA attributes",6
+"Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",6
+"Ensure role attribute has an appropriate value for the element",4
+"Ensure elements with an ARIA role that require child roles contain them",1
+"Ensure the order of headings is semantically correct",1
+
+Column,Total Values,Unique Values
+Violation Type,25,6
+
+Value,Count
+"aria-required-parent",7
+"aria-allowed-attr",6
+"color-contrast",6
+"aria-allowed-role",4
+"aria-required-children",1
+"heading-order",1
+
+Column,Total Values,Unique Values
+Impact,25,4
+
+Value,Count
+"critical",14
+"serious",6
+"minor",4
+"moderate",1
+
+Column,Total Values,Unique Values
+LEVEL,25,3
+
+Value,Count
+"wcag2a",14
+"wcag2aa",6
+"best-practice",5
+

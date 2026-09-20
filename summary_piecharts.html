@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Column Summaries - Pie Charts</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    h2 { margin-top: 2em; }
+    .chart-container { width: 500px; height: 400px; display: inline-block; margin: 2em; vertical-align: top; }
+  </style>
+</head>
+<body>
+  <h1>Pie Charts: Frequency Summary for Each Column</h1>
+<div class="chart-container"><h2>URL</h2><canvas id="pie_0"></canvas></div><div class="chart-container"><h2>Rule</h2><canvas id="pie_1"></canvas></div><div class="chart-container"><h2>Violation description</h2><canvas id="pie_2"></canvas></div><div class="chart-container"><h2>Volation Type</h2><canvas id="pie_3"></canvas></div><div class="chart-container"><h2>Impact</h2><canvas id="pie_4"></canvas></div><div class="chart-container"><h2>LEVEL</h2><canvas id="pie_5"></canvas></div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const chartsData = [{"id":"pie_0","column":"URL","labels":["https://www.equinix.com/","https://www.mbusa.com/en/home"],"values":[62,25]},{"id":"pie_1","column":"Rule","labels":["All page content should be contained by landmarks","id attribute value must be unique","Elements must have sufficient color contrast","Certain ARIA roles must be contained by particular parents","Heading levels should only increase by one","Ensure interactive controls are not nested","ARIA role should be appropriate for the element","Headings should not be empty","Document should have one main landmark","Images must have alternate text","<li> elements must be contained in a <ul> or <ol>","Certain ARIA roles must contain particular children"],"values":[36,11,11,10,4,4,4,2,2,1,1,1]},{"id":"pie_2","column":"Violation description","labels":["Ensures all page content is contained by landmarks","Ensures every id attribute value is unique","Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds","Ensures elements with an ARIA role that require parent roles are contained by them","Ensures the order of headings is semantically correct","Nested interactive controls are not announced by screen readers","Ensures role attribute has an appropriate value for the element","Ensures headings have discernible text","Ensures the document has a main landmark","Ensures <img> elements have alternate text or a role of none or presentation","Ensures <li> elements are used semantically","Ensures elements with an ARIA role that require child roles contain them"],"values":[36,11,11,10,4,4,4,2,2,1,1,1]},{"id":"pie_3","column":"Volation Type","labels":["region","duplicate-id","color-contrast","aria-required-parent","heading-order","nested-interactive","aria-allowed-role","empty-heading","landmark-one-main","image-alt","listitem","aria-required-children"],"values":[36,11,11,10,4,4,4,2,2,1,1,1]},{"id":"pie_4","column":"Impact","labels":["moderate","minor","serious","critical"],"values":[42,17,16,12]},{"id":"pie_5","column":"LEVEL","labels":["best-practice","wcag2a","wcag2aa"],"values":[48,28,11]}];
+  chartsData.forEach(function(data) {
+    new Chart(document.getElementById(data.id), {
+      type: 'pie',
+      data: {
+        labels: data.labels,
+        datasets: [{
+          data: data.values,
+          backgroundColor: [
+            '#FF6384', '#36A2EB', '#FFCE56', '#66bb6a', '#ab47bc',
+            '#29b6f6', '#ef5350', '#ffa726', '#8d6e63', '#26a69a',
+            '#d4e157', '#5c6bc0', '#ec407a', '#42a5f5', '#7e57c2'
+          ],
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { display: true, position: 'bottom' },
+          title: { display: false }
+        }
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>

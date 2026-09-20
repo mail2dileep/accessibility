@@ -1,0 +1,16 @@
+Column,Total Values,Unique Values
+Rule,87,12
+
+Value,Count
+"All page content should be contained by landmarks",36
+"id attribute value must be unique",11
+"Elements must have sufficient color contrast",11
+"Certain ARIA roles must be contained by particular parents",10
+"Heading levels should only increase by one",4
+"Ensure interactive controls are not nested",4
+"ARIA role should be appropriate for the element",4
+"Headings should not be empty",2
+"Document should have one main landmark",2
+"Images must have alternate text",1
+"<li> elements must be contained in a <ul> or <ol>",1
+"Certain ARIA roles must contain particular children",1

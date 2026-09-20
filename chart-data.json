@@ -1,0 +1,98 @@
+{
+  "charts": [
+    {
+      "title": "URL",
+      "labels": [
+        "https://www.mbusa.com/en/home?tab=welcome-home-celebration"
+      ],
+      "values": [
+        25
+      ]
+    },
+    {
+      "title": "Rule",
+      "labels": [
+        "Certain ARIA roles must be contained by particular parents",
+        "Elements must only use supported ARIA attributes",
+        "Elements must meet minimum color contrast ratio thresholds",
+        "ARIA role should be appropriate for the element",
+        "Certain ARIA roles must contain particular children",
+        "Heading levels should only increase by one"
+      ],
+      "values": [
+        7,
+        6,
+        6,
+        4,
+        1,
+        1
+      ]
+    },
+    {
+      "title": "Violation description",
+      "labels": [
+        "Ensure elements with an ARIA role that require parent roles are contained by them",
+        "Ensure an element's role supports its ARIA attributes",
+        "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "Ensure role attribute has an appropriate value for the element",
+        "Ensure elements with an ARIA role that require child roles contain them",
+        "Ensure the order of headings is semantically correct"
+      ],
+      "values": [
+        7,
+        6,
+        6,
+        4,
+        1,
+        1
+      ]
+    },
+    {
+      "title": "Violation Type",
+      "labels": [
+        "aria-required-parent",
+        "aria-allowed-attr",
+        "color-contrast",
+        "aria-allowed-role",
+        "aria-required-children",
+        "heading-order"
+      ],
+      "values": [
+        7,
+        6,
+        6,
+        4,
+        1,
+        1
+      ]
+    },
+    {
+      "title": "Impact",
+      "labels": [
+        "critical",
+        "serious",
+        "minor",
+        "moderate"
+      ],
+      "values": [
+        14,
+        6,
+        4,
+        1
+      ]
+    },
+    {
+      "title": "LEVEL",
+      "labels": [
+        "wcag2a",
+        "wcag2aa",
+        "best-practice"
+      ],
+      "values": [
+        14,
+        6,
+        5
+      ]
+    }
+  ]
+}

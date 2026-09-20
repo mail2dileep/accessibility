@@ -1,0 +1,16 @@
+Column,Total Values,Unique Values
+Violation description,87,12
+
+Value,Count
+"Ensures all page content is contained by landmarks",36
+"Ensures every id attribute value is unique",11
+"Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",11
+"Ensures elements with an ARIA role that require parent roles are contained by them",10
+"Ensures the order of headings is semantically correct",4
+"Nested interactive controls are not announced by screen readers",4
+"Ensures role attribute has an appropriate value for the element",4
+"Ensures headings have discernible text",2
+"Ensures the document has a main landmark",2
+"Ensures <img> elements have alternate text or a role of none or presentation",1
+"Ensures <li> elements are used semantically",1
+"Ensures elements with an ARIA role that require child roles contain them",1

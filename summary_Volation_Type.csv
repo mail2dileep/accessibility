@@ -1,0 +1,16 @@
+Column,Total Values,Unique Values
+Volation Type,87,12
+
+Value,Count
+"region",36
+"duplicate-id",11
+"color-contrast",11
+"aria-required-parent",10
+"heading-order",4
+"nested-interactive",4
+"aria-allowed-role",4
+"empty-heading",2
+"landmark-one-main",2
+"image-alt",1
+"listitem",1
+"aria-required-children",1

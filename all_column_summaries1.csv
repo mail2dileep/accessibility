@@ -1,0 +1,109 @@
+Column,Total Values,Unique Values
+URL,105,6
+
+Value,Count
+"https://www.gs1us.org/",29
+"https://www.mbusa.com/en/home",24
+"https://www.coolray.com/",20
+"https://britebox.com/",18
+"https://www.credera.com/en-us",9
+"https://www.equinix.com/",5
+
+Column,Total Values,Unique Values
+Rule,105,22
+
+Value,Count
+"Elements must meet minimum color contrast ratio thresholds",28
+"All page content should be contained by landmarks",19
+"Certain ARIA roles must be contained by particular parents",7
+"Elements must only use supported ARIA attributes",6
+"Certain ARIA roles must contain particular children",6
+"Heading levels should only increase by one",6
+"Alternative text of images should not be repeated as text",6
+"ARIA role should be appropriate for the element",4
+"Links must be distinguishable without relying on color",4
+"Scrollable region must have keyboard access",4
+"Document should not have more than one banner landmark",2
+"Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",2
+"Links must have discernible text",2
+"Images must have alternative text",1
+"Interactive controls must not be nested",1
+"<html> element must have a lang attribute",1
+"Document should have one main landmark",1
+"Table header text should not be empty",1
+"Banner landmark should not be contained in another landmark",1
+"Zooming and scaling must not be disabled",1
+"Headings should not be empty",1
+"Page should contain a level-one heading",1
+
+Column,Total Values,Unique Values
+Violation description,105,22
+
+Value,Count
+"Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",28
+"Ensure all page content is contained by landmarks",19
+"Ensure elements with an ARIA role that require parent roles are contained by them",7
+"Ensure an element's role supports its ARIA attributes",6
+"Ensure elements with an ARIA role that require child roles contain them",6
+"Ensure the order of headings is semantically correct",6
+"Ensure image alternative is not repeated as text",6
+"Ensure role attribute has an appropriate value for the element",4
+"Ensure links are distinguished from surrounding text in a way that does not rely on color",4
+"Ensure elements that have scrollable content are accessible by keyboard",4
+"Ensure the document has at most one banner landmark",2
+"Ensure landmarks are unique",2
+"Ensure links have discernible text",2
+"Ensure <img> elements have alternative text or a role of none or presentation",1
+"Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",1
+"Ensure every HTML document has a lang attribute",1
+"Ensure the document has a main landmark",1
+"Ensure table headers have discernible text",1
+"Ensure the banner landmark is at top level",1
+"Ensure <meta name=""viewport""> does not disable text scaling and zooming",1
+"Ensure headings have discernible text",1
+"Ensure that the page- or at least one of its frames contains a level-one heading",1
+
+Column,Total Values,Unique Values
+Volation Type,105,22
+
+Value,Count
+"color-contrast",28
+"region",19
+"aria-required-parent",7
+"aria-allowed-attr",6
+"aria-required-children",6
+"heading-order",6
+"image-redundant-alt",6
+"aria-allowed-role",4
+"link-in-text-block",4
+"scrollable-region-focusable",4
+"landmark-no-duplicate-banner",2
+"landmark-unique",2
+"link-name",2
+"image-alt",1
+"nested-interactive",1
+"html-has-lang",1
+"landmark-one-main",1
+"empty-table-header",1
+"landmark-banner-is-top-level",1
+"meta-viewport",1
+"empty-heading",1
+"page-has-heading-one",1
+
+Column,Total Values,Unique Values
+Impact,105,4
+
+Value,Count
+"serious",40
+"moderate",32
+"critical",21
+"minor",12
+
+Column,Total Values,Unique Values
+LEVEL,105,3
+
+Value,Count
+"best-practice",44
+"wcag2a",32
+"wcag2aa",29
+
