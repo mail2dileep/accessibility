@@ -9,6 +9,9 @@ Chart.register(ArcElement, Tooltip, Legend);
 import AppView from './AppView';
 import DetailsTable from './DetailsTable';
 
+// API base URL configurable via Vite env var `VITE_API_URL` (set in Render static site)
+const API_BASE = (import.meta.env.VITE_API_URL as string) || 'http://localhost:3002';
+
 type ChartData = {
   title: string;
   labels: string[];
@@ -68,7 +71,7 @@ const App: React.FC = () => {
   const fetchAllDetails = async () => {
     // try to fetch details from backend; fallback to current details
     try {
-      const res = await fetch('http://localhost:3002/slice-details');
+      const res = await fetch(`${API_BASE}/slice-details`);
       if (res.ok) {
         const body = await res.json();
         return body.details || [];
@@ -310,7 +313,7 @@ const App: React.FC = () => {
   };
 
   const downloadReportWithSuggestions = () => {
-    fetch('http://localhost:3002/generate-report-with-suggestions')
+    fetch(`${API_BASE}/generate-report-with-suggestions`)
       .then(response => response.blob())
       .then(blob => {
         const url = URL.createObjectURL(blob);
@@ -337,7 +340,7 @@ const App: React.FC = () => {
       const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
       const urls = lines.map(u => (/^https?:\/\//i.test(u) ? u : `https://${u}`));
       if (urls.length > 0) {
-        await fetch('http://localhost:3002/crawl-site', {
+        await fetch(`${API_BASE}/crawl-site`, {
           method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ urls })
         });
       }
@@ -362,7 +365,7 @@ const App: React.FC = () => {
     setIsScanning(true);
     setScanMessage('Scanning started...');
     try {
-      await fetch('http://localhost:3002/run-script', {
+      await fetch(`${API_BASE}/run-script`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ urls })
       });
       setScanMessage('Scanning in progress...');
@@ -380,7 +383,7 @@ const App: React.FC = () => {
 
   const fetchChartData = async () => {
     try {
-      const res = await fetch('http://localhost:3002/generate-report');
+      const res = await fetch(`${API_BASE}/generate-report`);
       if (!res.ok) throw new Error('Failed to fetch charts');
       const body = await res.json();
       setCharts(body.charts || []);
@@ -394,7 +397,7 @@ const App: React.FC = () => {
       const params = new URLSearchParams();
       if (chartTitle) params.set('chartTitle', chartTitle as string);
       if (label) params.set('label', label as string);
-      const res = await fetch(`http://localhost:3002/slice-details?${params.toString()}`);
+      const res = await fetch(`${API_BASE}/slice-details?${params.toString()}`);
       if (!res.ok) throw new Error('Failed to fetch slice details');
       const body = await res.json();
       setDetails(body.details || []);
