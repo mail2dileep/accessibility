@@ -5,7 +5,6 @@ services:
     name: accessibility-frontend
     runtime: static
     plan: free
-    region: oregon
     buildCommand: npm ci && npm run build
     staticPublishPath: dist
     autoDeploy: true
