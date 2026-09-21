@@ -1,0 +1,7 @@
+{
+  "name": "axe-reports",
+  "version": "1.1.11-custom",
+  "description": "Custom axe reports CSV formatter with WCAG tags",
+  "main": "axe-reports.js",
+  "license": "MIT"
+}

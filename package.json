@@ -15,6 +15,7 @@
     "@heroui/react": "2.7.9",
     "@iconify/react": "latest",
     "axios": "^1.10.0",
+    "axe-reports": "file:vendor/axe-reports",
     "chart.js": "^4.5.0",
     "chartjs-plugin-datalabels": "^2.2.0",
     "cheerio": "^1.1.0",
