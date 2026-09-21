@@ -1,13 +1,13 @@
 # Render service definition for separate frontend (static) and backend (Docker) deployments
 # Replace the placeholder hostnames with the actual service URLs or configure env vars in the Render dashboard.
 services:
-  - type: static
+  - type: web
     name: accessibility-frontend
-    env: static
+    runtime: static
     plan: free
     region: oregon
     buildCommand: npm ci && npm run build
-    publishPath: dist
+    staticPublishPath: dist
     autoDeploy: true
     envVars:
       - key: VITE_API_URL
@@ -16,7 +16,7 @@ services:
 
   - type: web
     name: accessibility-backend
-    env: docker
+    runtime: docker
     plan: free
     region: oregon
     dockerfilePath: ./Dockerfile
