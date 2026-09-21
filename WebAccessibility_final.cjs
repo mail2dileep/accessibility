@@ -14,6 +14,8 @@ const SCRIPT_TIMEOUT_MS = 60000;
 const AXE_TIMEOUT_MS = 30000;
 const MAX_RETRIES_PER_URL = 2;
 
+fs.mkdirSync('./Output', { recursive: true });
+
 function loadUrls() {
 	const fileData = fs.readFileSync(INPUT_CSV_PATH, { encoding: 'utf8' });
 	const urls = csvjson

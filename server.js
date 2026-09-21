@@ -11,6 +11,8 @@ import { generateHTMLReportWithSuggestions, readIssuesFromCSV } from './reportGe
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const outputDir = path.join(__dirname, 'Output');
+const resultsCsvPath = path.join(outputDir, 'test-results.csv');
 
 // Environment quick-check at startup (do not print secrets)
 console.info('OPENAI_API_KEY present:', !!process.env.OPENAI_API_KEY);
@@ -86,7 +88,8 @@ app.use(express.static('public'));
 app.post('/run-script', async (req, res) => {
   const urls = req.body.urls || [];
   const csvContent = 'URL\n' + urls.join('\n');
-  fs.writeFileSync('./TesturlUpdated.csv', csvContent);
+  fs.mkdirSync(outputDir, { recursive: true });
+  fs.writeFileSync(path.join(__dirname, 'TesturlUpdated.csv'), csvContent);
   try {
     await runAccessibilityScan();
     return res.status(200).json({ message: "Accessibility Scan completed" });
@@ -133,7 +136,7 @@ app.get('/slice-details', (req, res) => {
   const { chartTitle, label } = req.query;
   const results = [];
   setTimeout(() => {
-    fs.createReadStream(path.join(__dirname, 'output', 'test-results.csv'))
+    fs.createReadStream(resultsCsvPath)
       .pipe(csv())
       .on('data', (data) => {
         if (!label) {
@@ -208,7 +211,7 @@ app.post('/generate-suggestion', async (req, res) => {
 
 app.get('/generate-report-with-suggestions', async (req, res) => {
   try {
-    const csvPath = path.join(__dirname, 'output', 'test-results.csv');
+    const csvPath = resultsCsvPath;
     if (!fs.existsSync(csvPath)) {
       return res.status(400).json({ error: 'No test results found. Run accessibility scan first.' });
     }
