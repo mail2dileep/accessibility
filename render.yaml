@@ -23,7 +23,7 @@ services:
     envVars:
       - key: FRONTEND_ORIGIN
         # Set to the frontend service URL after it's created, e.g. https://accessibility-frontend.onrender.com
-        value: https://accessibility-frontend.onrender.com
+        value: https://accessibility-frontend-0wxi.onrender.com
       # DO NOT store secrets here in plaintext; add them in the Render dashboard as secrets.
       # - key: OPENAI_API_KEY
       #   value: <your-openai-key>
