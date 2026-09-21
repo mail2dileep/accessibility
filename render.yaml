@@ -10,7 +10,7 @@ services:
     envVars:
       - key: VITE_API_URL
         # Set to the backend service URL after it's created, e.g. https://accessibility-backend.onrender.com
-        value: https://accessibility-backend.onrender.com
+        value: https://accessibility-backend-aanl.onrender.com
 
   - type: web
     name: accessibility-backend
