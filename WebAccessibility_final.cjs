@@ -1,7 +1,7 @@
 const AxeBuilder = require('@axe-core/webdriverjs');
 const AxeReports = require('axe-reports');
 const webdriver = require('selenium-webdriver');
-const firefox = require('selenium-webdriver/firefox');
+const chrome = require('selenium-webdriver/chrome');
 const csvjson = require('csvjson');
 const fs = require('fs');
 const { parse } = require('csv-parse');
@@ -41,21 +41,19 @@ function removeExistingOutput() {
 }
 
 function buildDriver() {
-	const firefoxOptions = new firefox.Options();
-	// Use headless mode for Firefox via CLI argument (avoids API differences)
-	firefoxOptions.addArguments('-headless');
-
-	// Add a few common flags; some may be ignored by Firefox but harmless
-	firefoxOptions.addArguments(
-		'--disable-gpu',
-		'--disable-dev-shm-usage',
+	const chromeOptions = new chrome.Options();
+	chromeOptions.addArguments(
+		'--headless=new',
 		'--no-sandbox',
+		'--disable-dev-shm-usage',
+		'--disable-gpu',
+		'--window-size=1920,1080',
 		'--disable-background-timer-throttling'
 	);
 
 	const driver = new webdriver.Builder()
-		.forBrowser('firefox')
-		.setFirefoxOptions(firefoxOptions)
+		.forBrowser('chrome')
+		.setChromeOptions(chromeOptions)
 		.build();
 
 	driver.manage().setTimeouts({
